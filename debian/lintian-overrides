@@ -1,2 +1,4 @@
 # we ask only on purge, on purpose
 etckeeper: no-debconf-config
+# we deliberately access the full path to stash it for purging
+etckeeper: command-with-path-in-maintainer-script prerm:28 /usr/bin/etckeeper

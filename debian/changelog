@@ -6,6 +6,10 @@ etckeeper (1.18.2-1) unstable; urgency=medium
     * remove .pyc files on build
     * install bash completions in standard location
     * ignore missing debian/config file, we ask only on purge on purpose
+    * ignore full path for /usr/bin/etckeeper, we use it to stash it for
+      later
+  * Update to standards 3.9.6, no change
+  * Remove obsolete XS-Python-Version field
 
  -- Antoine Beaupré <anarcat@debian.org>  Thu, 14 Jan 2016 15:20:40 -0500
 
