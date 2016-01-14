@@ -10,6 +10,7 @@ etckeeper (1.18.2-1) unstable; urgency=medium
       later
   * Update to standards 3.9.6, no change
   * Remove obsolete XS-Python-Version field
+  * Run debconf-updatepo, outdating a bunch of translations
 
  -- Antoine Beaupré <anarcat@debian.org>  Thu, 14 Jan 2016 15:20:40 -0500
 
