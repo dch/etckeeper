@@ -14,4 +14,4 @@ override_dh_auto_install:
 	# sure why. quickly work around by trashing those files after install
 	# they are regenerated on postinst anyways, see
 	# https://www.debian.org/doc/packaging-manuals/python-policy/ch-module_packages.html#s-byte_compilation
-	find $(CURDIR)/debian/etckeeper/ -delete '*.pyc'
+	find $(CURDIR)/debian/etckeeper/ -name '*.pyc' -a -delete
