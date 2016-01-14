@@ -7,3 +7,11 @@ export PYTHON_INSTALL_OPTS=--install-layout=deb
 
 override_dh_installdocs:
 	dh_installdocs -X.gitignore
+
+override_dh_auto_install:
+	dh_auto_install
+	# *something* made setuptools install .pyc files after 1.18.1, not
+	# sure why. quickly work around by trashing those files after install
+	# they are regenerated on postinst anyways, see
+	# https://www.debian.org/doc/packaging-manuals/python-policy/ch-module_packages.html#s-byte_compilation
+	find $(CURDIR)/debian/etckeeper/ -delete '*.pyc'
