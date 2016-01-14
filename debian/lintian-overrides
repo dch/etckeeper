@@ -1,0 +1,2 @@
+# we ask only on purge, on purpose
+etckeeper: no-debconf-config

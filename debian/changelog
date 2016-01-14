@@ -2,9 +2,10 @@ etckeeper (1.18.2-1) unstable; urgency=medium
 
   * Prepare upload to Debian unstable
   * Fix Makefile version patterns to ignore non-native version number
-  * Fix lintian warning:
+  * Fix lintian warnings:
     * remove .pyc files on build
     * install bash completions in standard location
+    * ignore missing debian/config file, we ask only on purge on purpose
 
  -- Antoine Beaupré <anarcat@debian.org>  Thu, 14 Jan 2016 15:20:40 -0500
 
