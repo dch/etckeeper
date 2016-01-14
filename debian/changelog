@@ -1,3 +1,9 @@
+etckeeper (1.18.2-1) unstable; urgency=medium
+
+  * Prepare upload to Debian unstable
+
+ -- Antoine Beaupré <anarcat@debian.org>  Thu, 14 Jan 2016 14:39:31 -0500
+
 etckeeper (1.18.2) unstable; urgency=medium
 
   * Use getent utility instead of perl. (Elan Ruusamäe)
