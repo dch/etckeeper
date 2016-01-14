@@ -7,7 +7,8 @@ DESTDIR?=
 prefix=/usr
 bindir=${prefix}/bin
 etcdir=/etc
-mandir=${prefix}/share/man
+sharedir=${prefix}/share
+mandir=${sharedir}/man
 vardir=/var
 CP=cp -R
 INSTALL=install 
@@ -27,8 +28,8 @@ install: etckeeper.version
 	$(INSTALL_EXE) etckeeper $(DESTDIR)$(bindir)/etckeeper
 	mkdir -p $(DESTDIR)$(mandir)/man8
 	$(INSTALL_DATA) etckeeper.8 $(DESTDIR)$(mandir)/man8/etckeeper.8
-	mkdir -p $(DESTDIR)$(etcdir)/bash_completion.d
-	$(INSTALL_DATA) bash_completion $(DESTDIR)$(etcdir)/bash_completion.d/etckeeper
+	mkdir -p $(DESTDIR)$(sharedir)/bash-completion/completions
+	$(INSTALL_DATA) bash_completion $(DESTDIR)$(sharedir)/bash-completion/completions/etckeeper
 ifeq ($(HIGHLEVEL_PACKAGE_MANAGER),apt)
 	mkdir -p $(DESTDIR)$(etcdir)/apt/apt.conf.d
 	$(INSTALL_DATA) apt.conf $(DESTDIR)$(etcdir)/apt/apt.conf.d/05etckeeper
